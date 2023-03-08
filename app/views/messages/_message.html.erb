@@ -1,7 +1,11 @@
+<%=turbo_stream_from @message%>
 <div id="<%= dom_id message %>">
   <p>
     <strong>Body:</strong>
     <%= message.body %>
   </p>
-
+  <p>
+  <%=link_to "show this message", message %> 
+  <%=button_to "Destroy this message", message_path(message),method: :delete%>
+</p>
 </div>
